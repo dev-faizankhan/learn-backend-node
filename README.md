@@ -2,10 +2,20 @@
 
 #### **`file-storage` README.md**
 
-````markdown
 # File Storage Implementation
 
-This branch uses JSON files for data storage.
+## Overview
+
+This is a practice project demonstrating basic CRUD operations for a file storage system using Node.js and Express. It includes endpoints for user registration, login, creating posts with image upload, and token-based authentication.
+
+This branch uses JSON files for data storage instead of a database.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- Yarn or npm
 
 ## Setup
 
@@ -43,4 +53,3 @@ This branch uses JSON files for data storage.
 
 - Data is stored in `users.json` and `posts.json` files in the `data` directory.
 - Images are saved in the `uploads` directory.
-````
