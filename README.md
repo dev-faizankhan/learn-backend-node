@@ -1,22 +1,48 @@
-# Learn Backend with Node.js
+### **Branch-specific README.md**
 
-This repository is a learning project for building backend applications using Node.js. It evolves through three stages of data management:
+Create a `README.md` in each branch with setup instructions and relevant information.
 
-1. **File-based storage**
-2. **MongoDB integration**
-3. **PostgreSQL integration**
+#### **`file-storage` README.md**
 
-## Branches
+````markdown
+# File Storage Implementation
 
-- [`file-storage`](https://github.com/dev-faizankhan/learn-backend-node/tree/file-storage): Initial setup with file-based storage.
-
-Follow the instructions in each branch to set up and run the project.
+This branch uses JSON files for data storage.
 
 ## Setup
 
-Clone the repository and checkout to the desired branch:
+1. Install dependencies:
 
-```bash
-git clone https://github.com/dev-faizankhan/learn-backend-node.git
-cd learn-backend-node
-git checkout <branch-name>
+   ```bash
+   yarn install
+   ```
+
+2. Create a `.env` file in the root directory:
+
+   ```bash
+   JWT_ACCESS_SECRET=your_access_secret_key
+   JWT_REFRESH_SECRET=your_refresh_secret_key
+   ACCESS_TOKEN_EXPIRY=15m
+   REFRESH_TOKEN_EXPIRY=7d
+   ```
+
+3. Start the server:
+
+   ```bash
+   yarn start
+   ```
+
+## API Endpoints
+
+- `POST /api/auth/signup`: Register a new user.
+- `POST /api/auth/login`: Login and get tokens.
+- `POST /api/auth/refresh-token`: Refresh access token.
+- `POST /api/auth/logout`: Logout user.
+- `POST /api/posts`: Create a post (requires authentication).
+- `GET /api/posts`: Get all posts.
+
+## Notes
+
+- Data is stored in `users.json` and `posts.json` files in the `data` directory.
+- Images are saved in the `uploads` directory.
+````
